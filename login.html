@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Coffee Shop</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+  background: linear-gradient(to right, #3b1c1c, #6b2d2d);
+  font-family: Arial, sans-serif;
+}
+
+/* CENTER WRAPPER */
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LOGIN BOX */
+.login-box {
+  max-width: 400px;
+  width: 100%;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn-custom {
+  background-color: #6b2d2d;
+  color: white;
+}
+
+.btn-custom:hover {
+  background-color: #3b1c1c;
+  color: white;
+}
+
+/* FOCUS ACCESSIBILITY */
+input:focus, button:focus {
+  outline: 3px solid #ffcc00;
+  outline-offset: 2px;
+}
+</style>
+</head>
+
+<body>
+
+<header class="visually-hidden">
+  <h1>Coffee Shop Login Page</h1>
+</header>
+
+<main>
+  <section class="login-box" aria-labelledby="login-title">
+
+    <h2 id="login-title">Login</h2>
+
+    <form aria-describedby="login-desc">
+
+      <p id="login-desc" class="visually-hidden">
+        Enter your username and password to access your account.
+      </p>
+
+      <fieldset>
+        <legend class="visually-hidden">Login Form</legend>
+
+        <!-- Username -->
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input 
+            type="text"
+            id="username"
+            name="username"
+            class="form-control"
+            placeholder="Enter your username"
+            autocomplete="username"
+            required
+            aria-required="true"
+          >
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input 
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            placeholder="Enter your password"
+            autocomplete="current-password"
+            required
+            aria-required="true"
+          >
+        </div>
+
+        <!-- Button -->
+        <button type="submit" class="btn btn-custom w-100">
+          Login
+        </button>
+
+      </fieldset>
+
+    </form>
+
+  </section>
+</main>
+
+</body>
+</html>

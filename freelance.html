@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Freelance Marketplace Pro</title>
+
+<style>
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  }
+
+  body{
+    background:#f5f7fb;
+    color:#111;
+  }
+
+  /* TOP NAVBAR */
+  .topbar{
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 30px;
+    border-bottom:1px solid #eaeaea;
+    position:sticky;
+    top:0;
+    z-index:1000;
+  }
+
+  .logo{
+    font-weight:800;
+    font-size:20px;
+    color:#1dbf73;
+  }
+
+  .search{
+    flex:1;
+    margin:0 20px;
+    display:flex;
+  }
+
+  .search input{
+    width:100%;
+    padding:10px 14px;
+    border:1px solid #ddd;
+    border-radius:6px 0 0 6px;
+    outline:none;
+  }
+
+  .search button{
+    padding:10px 14px;
+    border:none;
+    background:#1dbf73;
+    color:white;
+    border-radius:0 6px 6px 0;
+    cursor:pointer;
+  }
+
+  .nav a{
+    margin-left:15px;
+    text-decoration:none;
+    color:#444;
+    font-size:14px;
+  }
+
+  /* CATEGORY BAR */
+  .categories{
+    background:white;
+    padding:10px 30px;
+    display:flex;
+    gap:10px;
+    overflow:auto;
+    border-bottom:1px solid #eee;
+  }
+
+  .chip{
+    background:#f0f0f0;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+    white-space:nowrap;
+    cursor:pointer;
+  }
+
+  .chip:hover{
+    background:#1dbf73;
+    color:white;
+  }
+
+  /* HERO */
+  .hero{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:white;
+    padding:70px 20px;
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .hero p{
+    opacity:0.8;
+    margin-top:10px;
+  }
+
+  /* SECTION */
+  .section{
+    padding:40px 30px;
+  }
+
+  .section h2{
+    margin-bottom:20px;
+  }
+
+  /* GIG GRID */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+  }
+
+  .card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,0.06);
+    transition:0.2s;
+  }
+
+  .card:hover{
+    transform:translateY(-5px);
+  }
+
+  .card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+  }
+
+  .content{
+    padding:12px;
+  }
+
+  .seller{
+    font-size:12px;
+    color:#777;
+  }
+
+  .title{
+    font-weight:600;
+    margin-top:5px;
+  }
+
+  .rating{
+    font-size:13px;
+    margin-top:5px;
+    color:#f59e0b;
+  }
+
+  .footer-row{
+    display:flex;
+    justify-content:space-between;
+    margin-top:10px;
+    font-size:13px;
+  }
+
+  .price{
+    font-weight:700;
+    color:#1dbf73;
+  }
+
+  .badge{
+    background:#1dbf73;
+    color:white;
+    padding:2px 6px;
+    border-radius:4px;
+    font-size:11px;
+  }
+
+  /* CTA */
+  .cta{
+    background:#1dbf73;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+    margin-top:40px;
+  }
+
+  .cta button{
+    margin-top:15px;
+    padding:12px 20px;
+    border:none;
+    background:white;
+    color:#1dbf73;
+    font-weight:bold;
+    border-radius:6px;
+    cursor:pointer;
+  }
+/* ===== IMPROVE NEW ADDED SECTIONS ONLY ===== */
+
+/* HOW IT WORKS + WHY CHOOSE US + OTHER TEXT CARDS */
+.section .card p{
+  font-size: 13px;
+  color: #555;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* make simple text cards look cleaner */
+.section .card{
+  padding: 10px;
+}
+
+/* remove too plain look */
+.section .card .title{
+  font-size: 16px;
+  color: #0f172a;
+}
+
+/* categories section fix (top categories you added) */
+.section .categories{
+  border-radius: 12px;
+  padding: 15px;
+  gap: 12px;
+}
+
+/* testimonials style upgrade */
+.section .card p{
+  font-style: italic;
+}
+
+/* latest stats section (numbers section) */
+.section .card{
+  text-align: center;
+}
+
+/* make stats stand out */
+.section .card .title{
+  font-size: 18px;
+  font-weight: 700;
+  color: #1dbf73;
+}
+
+/* project images fix */
+.section img{
+  border-radius: 10px;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* prevent huge image issue */
+.card img{
+  max-height: 160px;
+}
+  /* FOOTER */
+  footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
+  }
+@media(max-width:768px){
+
+  /* navbar fix */
+  .topbar{
+    flex-direction:column;
+    gap:10px;
+    text-align:center;
+  }
+
+  .search{
+    width:100%;
+    margin:10px 0;
+  }
+
+  .nav a{
+    margin:6px;
+    display:inline-block;
+  }
+
+  /* hero text */
+  .hero h1{
+    font-size:28px;
+  }
+
+  /* better spacing */
+  .section{
+    padding:30px 15px;
+  }
+}
+
+@media(max-width:600px){
+
+  /* single column layout */
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  /* cards better spacing */
+  .card{
+    text-align:center;
+  }
+
+  .footer-row{
+    flex-direction:column;
+    gap:5px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="logo">freelancePro</div>
+
+  <div class="search">
+    <input type="text" placeholder="Search services...">
+    <button>Search</button>
+  </div>
+
+  <div class="nav">
+    <a href="#">Become Seller</a>
+    <a href="#">Orders</a>
+    <a href="#">Sign In</a>
+  </div>
+</div>
+
+<!-- CATEGORY -->
+<div class="categories">
+  <div class="chip">Logo Design</div>
+  <div class="chip">Web Development</div>
+  <div class="chip">AI Services</div>
+  <div class="chip">Video Editing</div>
+  <div class="chip">SEO</div>
+  <div class="chip">Marketing</div>
+  <div class="chip">Writing</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Find Freelancers for Any Job</h1>
+  <p>Professional services starting from just $5</p>
+</div>
+
+<!-- GIGS -->
+<div class="section">
+  <h2>Trending Gigs</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d">
+      <div class="content">
+        <div class="seller">⭐ Pro Seller • John</div>
+        <div class="title">I will design modern logo</div>
+        <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+
+        <div class="footer-row">
+          <span class="badge">24h delivery</span>
+          <span class="price">From $10</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+      <div class="content">
+        <div class="seller">⭐ Level 2 • Sarah</div>
+        <div class="title">Build responsive website</div>
+        <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+
+        <div class="footer-row">
+          <span class="badge">3 Days</span>
+          <span class="price">From $50</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
+      <div class="content">
+        <div class="seller">⭐ Pro Seller • Mike</div>
+        <div class="title">Social media marketing</div>
+        <div class="rating">⭐⭐⭐⭐⭐ (4.7)</div>
+
+        <div class="footer-row">
+          <span class="badge">1 Week</span>
+          <span class="price">From $25</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>Become a Freelancer & Start Earning</h2>
+  <p>Join thousands of professionals worldwide</p>
+  <button>Join Now</button>
+</div>
+<div class="section">
+  <h2>Top Skill Experts</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="content">
+        <div class="title">UI/UX Designers</div>
+        <p>Experts in modern app & web design.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="content">
+        <div class="title">Full Stack Developers</div>
+        <p>Build complete websites & apps.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="content">
+        <div class="title">AI Engineers</div>
+        <p>Work with latest AI technologies.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="section">
+  <h2>Our Platform in Numbers</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="content">
+        <div class="title">10,000+ Freelancers</div>
+        <p>Active professionals worldwide</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="content">
+        <div class="title">25,000+ Projects</div>
+        <p>Successfully completed jobs</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="content">
+        <div class="title">4.9/5 Rating</div>
+        <p>Trusted by global clients</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- FOOTER -->
+<footer>
+  © 2026 FreelancePro • All rights reserved
+</footer>
+
+</body>
+</html>

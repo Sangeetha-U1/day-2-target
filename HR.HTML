@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>HR Admin Dashboard</title>
+
+<style>
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  }
+
+  body{
+    background:#f4f6fb;
+    color:#111;
+  }
+
+  /* ===== LAYOUT ===== */
+  .container{
+    display:flex;
+    min-height:100vh;
+  }
+
+  /* ===== SIDEBAR ===== */
+  .sidebar{
+    width:250px;
+    background:#0f172a;
+    color:white;
+    padding:20px;
+    position:fixed;
+    height:100%;
+  }
+
+  .sidebar h2{
+    color:#1dbf73;
+    margin-bottom:20px;
+  }
+
+  .sidebar a{
+    display:block;
+    color:#cbd5e1;
+    text-decoration:none;
+    padding:10px;
+    border-radius:6px;
+    margin-bottom:6px;
+  }
+
+  .sidebar a:hover{
+    background:#1dbf73;
+    color:white;
+  }
+
+  /* ===== MAIN ===== */
+  .main{
+    margin-left:250px;
+    width:100%;
+  }
+
+  /* ===== TOPBAR ===== */
+  .topbar{
+    background:white;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #eee;
+    position:sticky;
+    top:0;
+  }
+
+  .search input{
+    padding:8px 12px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    outline:none;
+  }
+
+  /* ===== DASHBOARD CARDS ===== */
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    padding:20px;
+  }
+
+  .card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+  }
+
+  .card h3{
+    color:#1dbf73;
+  }
+
+  /* ===== TABLE ===== */
+  .table-section{
+    padding:20px;
+  }
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+  }
+
+  th, td{
+    padding:12px;
+    text-align:left;
+    border-bottom:1px solid #eee;
+    font-size:14px;
+  }
+
+  th{
+    background:#f1f5f9;
+  }
+
+  .status{
+    padding:4px 8px;
+    border-radius:6px;
+    font-size:12px;
+    color:white;
+  }
+
+  .active{ background:#22c55e; }
+  .inactive{ background:#ef4444; }
+
+  /* ===== RESPONSIVE ===== */
+  @media(max-width:768px){
+    .sidebar{
+      width:200px;
+    }
+    .main{
+      margin-left:200px;
+    }
+  }
+
+  @media(max-width:600px){
+    .sidebar{
+      position:relative;
+      width:100%;
+      height:auto;
+    }
+
+    .main{
+      margin-left:0;
+    }
+
+    .topbar{
+      flex-direction:column;
+      gap:10px;
+      align-items:flex-start;
+    }
+  }
+  
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>HR Panel</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Employees</a>
+    <a href="#">Attendance</a>
+    <a href="#">Payroll</a>
+    <a href="#">Leaves</a>
+    <a href="#">Settings</a>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <h3>Admin Dashboard</h3>
+      <div class="search">
+        <input type="text" placeholder="Search employees...">
+      </div>
+    </div>
+
+    <!-- CARDS -->
+    <div class="cards">
+
+      <div class="card">
+        <h3>Total Employees</h3>
+        <p>120</p>
+      </div>
+
+      <div class="card">
+        <h3>Active Today</h3>
+        <p>98</p>
+      </div>
+
+      <div class="card">
+        <h3>On Leave</h3>
+        <p>12</p>
+      </div>
+
+      <div class="card">
+        <h3>Payroll Pending</h3>
+        <p>5</p>
+      </div>
+
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-section">
+      <h3>Employee List</h3>
+      <br>
+
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Department</th>
+          <th>Status</th>
+        </tr>
+
+        <tr>
+          <td>Rahul Sharma</td>
+          <td>Developer</td>
+          <td>IT</td>
+          <td><span class="status active">Active</span></td>
+        </tr>
+
+        <tr>
+          <td>Priya Verma</td>
+          <td>HR Manager</td>
+          <td>HR</td>
+          <td><span class="status inactive">Inactive</span></td>
+        </tr>
+
+        <tr>
+          <td>Amit Kumar</td>
+          <td>Designer</td>
+          <td>UI/UX</td>
+          <td><span class="status active">Active</span></td>
+        </tr>
+
+      </table>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

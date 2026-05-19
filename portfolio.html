@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sangeetha Uppula - Frontend Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo"><span>S</span>Sangeetha</div>
+  <div class="menu-toggle" onclick="toggleMenu()">
+  <i class="fas fa-bars"></i>
+</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Service</a></li>
+     <li><a href="#skills">Skills</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- DOT NAVIGATION -->
+
+<div class="dot-nav">
+  <a onclick="goTo(0)"></a>
+<a onclick="goTo(1)"></a>
+<a onclick="goTo(2)"></a>
+<a onclick="goTo(3)"></a>
+<a onclick="goTo(4)"></a>
+<a onclick="goTo(5)"></a>
+</div>
+<!-- HOME SECTION -->
+ <div class="slider" id="slider">
+<section id="home">
+  <div class="home-content">
+
+    <!-- LEFT IMAGE -->
+    <div class="home-image">
+      <div class="home-img-box">
+        <i class="fas fa-user"></i>
+      </div>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="home-text">
+     <p class="home-subtitle fade-in fade-in-1">
+  I'm a <span id="typing"></span>
+</p>
+
+      <h1 class="home-title fade-in fade-in-2">
+        Hello, I'm<br><span>Sangeetha Uppula</span>
+      </h1>
+
+      <p class="home-desc fade-in fade-in-3">
+        A passionate Frontend Developer with expertise in building beautiful, responsive and user-friendly web applications.
+      </p>
+
+      <a href="https://github.com/Sangeetha-U1" target="_blank" class="btn-primary fade-in fade-in-4">
+        <i class="fab fa-github"></i> GitHub Profile
+      </a>
+    </div>
+
+  </div>
+</section><!-- ABOUT SECTION -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img-wrap">
+      <div class="about-img-placeholder">
+        <i class="fas fa-user"></i>
+      </div>
+    </div>
+    <div class="about-text">
+      <p class="section-label">WHO I AM</p>
+      <h2 class="section-title">About Me</h2>
+      <div class="about-highlight">
+        I am a fresher Frontend Developer who is passionate about creating elegant, functional, and high-performing websites. I love turning design ideas into reality using clean and efficient code.
+      </div>
+      <table class="info-table">
+        <tr>
+          <td>Name :</td>
+          <td>Sangeetha Uppula</td>
+        </tr>
+        <tr>
+          <td>Date of Birth :</td>
+          <td>13-09-2003</td>
+        </tr>
+        <tr>
+          <td>Address :</td>
+          <td>Karimnagar</td>
+        </tr>
+        <tr>
+          <td>Zip Code :</td>
+          <td>505001</td>
+        </tr>
+        <tr>
+          <td>Email :</td>
+          <td>sangeethauppula2@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Phone :</td>
+          <td>8142695161</td>
+        </tr>
+        <tr>
+          <td>Experience :</td>
+          <td>Fresher</td>
+        </tr>
+      </table>
+      <br>
+      <a href="https://github.com/Sangeetha-U1" target="_blank" class="btn-primary">
+        <i class="fab fa-github"></i> GitHub Profile
+      </a>
+    </div>
+  </div>
+
+  <div class="edu-exp-grid">
+    <div>
+      <h3 style="color:var(--pink);font-size:22px;font-weight:700;margin-bottom:25px;">Education</h3>
+      <div style="border-left:2px solid var(--light-gray);padding-left:25px;">
+        <div class="timeline-item" style="padding-left:0;position:relative;">
+          <div style="position:absolute;left:-37px;top:0;">
+            <div class="tl-icon"><i class="fas fa-graduation-cap"></i></div>
+          </div>
+          <div style="margin-left:20px;">
+            <div class="tl-year">2023 - 2025</div>
+            <div class="tl-title">MCA</div>
+            <div class="tl-desc">Completed post graduation with focus on web technologies and programming fundamentals.Hyderabad.</div>
+          </div>
+        </div>
+        
+        <div class="timeline-item" style="padding-left:0;position:relative;">
+          <div style="position:absolute;left:-37px;top:0;">
+            <div class="tl-icon"><i class="fas fa-graduation-cap"></i></div>
+          </div>
+          <div style="margin-left:20px;">
+            <div class="tl-year">2020 - 2023</div>
+            <div class="tl-title">B.Sc. Computer Science</div>
+            <div class="tl-desc">Completed graduation with focus on web technologies and programming fundamentals.</div>
+          </div>
+        </div>
+        <div class="timeline-item" style="padding-left:0;position:relative;margin-top:25px;">
+          <div style="position:absolute;left:-37px;top:0;">
+            <div class="tl-icon"><i class="fas fa-school"></i></div>
+          </div>
+          <div style="margin-left:20px;">
+            <div class="tl-year">2018 - 2020</div>
+            <div class="tl-title">Intermediate (MPC)</div>
+            <div class="tl-desc">Studied Mathematics, Physics and Computer Science at Karimnagar.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3 style="color:var(--pink);font-size:22px;font-weight:700;margin-bottom:25px;">Experience</h3>
+      <div style="border-left:2px solid var(--light-gray);padding-left:25px;">
+        <div class="timeline-item" style="padding-left:0;position:relative;">
+          <div style="position:absolute;left:-37px;top:0;">
+            <div class="tl-icon" style="background:var(--red);"><i class="fas fa-briefcase"></i></div>
+          </div>
+          <div style="margin-left:20px;">
+            <div class="tl-year">2026</div>
+            <div class="tl-title">Frontend Developer (Fresher)</div>
+            <div class="tl-desc">Building responsive web pages using HTML, CSS, Bootstrap and JavaScript. No prior work experience — fresher seeking first opportunity.</div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+   <!-- SERVICES SECTION -->
+<section id="services">
+  <div style="width:100%;max-width:1100px;margin:0 auto;">
+    <div class="section-header">
+      <p class="section-label">SERVICES</p>
+      <h2 class="section-title" style="display:block;">Top Categories</h2>
+      <p class="section-desc">I offer a range of frontend development services to help bring your digital vision to life with clean, modern solutions.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+        <h4>Web Designer</h4>
+        <p>Creating visually stunning, user-friendly web designs that captivate audiences and deliver excellent user experiences across all devices.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-th-large"></i></div>
+        <h4>Flexible Layouts</h4>
+        <p>Building fully responsive and flexible layouts using Bootstrap and CSS Grid that adapt perfectly to any screen size or device.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fab fa-wordpress"></i></div>
+        <h4>WordPress Development</h4>
+        <p>Developing custom WordPress themes and plugins to power your business website with easy content management capabilities.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-code"></i></div>
+        <h4>Frontend Development</h4>
+        <p>Writing clean, semantic HTML, CSS and JavaScript code to build fast-loading, accessible and modern web applications.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h4>Responsive Design</h4>
+        <p>Ensuring your website looks and performs perfectly on all devices — from desktops to tablets and mobile phones.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fab fa-python"></i></div>
+        <h4>Python Scripting</h4>
+        <p>Writing Python scripts for automation, data processing and basic backend logic to support your web applications.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SKILLS SECTION -->
+<section id="skills">
+  <div class="skills-inner">
+    <div class="section-header">
+      <p class="section-label">WHAT I KNOW</p>
+      <h2 class="section-title" style="display:block;">My Skills</h2>
+      <p class="section-desc">Here are my technical skills with proficiency levels developed through coursework and personal projects.</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <i class="fas fa-users"></i>
+        <span class="stat-num">5+</span>
+        <div class="stat-label">Projects Done</div>
+      </div>
+      <div class="stat-card">
+        <i class="fas fa-edit"></i>
+        <span class="stat-num">8</span>
+        <div class="stat-label">Technologies</div>
+      </div>
+      <div class="stat-card">
+        <i class="fas fa-trophy"></i>
+        <span class="stat-num">3</span>
+        <div class="stat-label">Certifications</div>
+      </div>
+      <div class="stat-card">
+        <i class="fas fa-thumbs-up"></i>
+        <span class="stat-num">100%</span>
+        <div class="stat-label">Dedication</div>
+      </div>
+    </div>
+
+    <div class="skills-two-col">
+      <div class="skills-section">
+        <h3>Frontend Skills</h3>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">HTML5</span><span class="skill-pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">CSS3</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Bootstrap</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">JavaScript</span><span class="skill-pct">75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+        </div>
+      </div>
+      <div class="skills-section">
+        <h3>Other Skills</h3>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">WordPress</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Python</span><span class="skill-pct">70%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Responsive Design</span><span class="skill-pct">88%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Git & GitHub</span><span class="skill-pct">72%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:72%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- PORTFOLIO SECTION -->
+
+<!-- PORTFOLIO SECTION -->
+<section id="portfolio">
+  <div class="portfolio-container">
+
+    <div class="section-header">
+      <p class="section-label">PORTFOLIO</p>
+      <h2 class="section-title">My Projects</h2>
+      <p class="section-desc">
+        Here are some of my featured projects showcasing my frontend development skills.
+      </p>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <!-- Project 1 -->
+      <div class="portfolio-card">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa" alt="Real Estate Website">
+
+        <div class="portfolio-label">
+          <h5>Real Estate Website</h5>
+          <span>HTML · CSS · Bootstrap · JS</span>
+
+    <a href="https://sangeetha-u1.github.io/event-form/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://sangeetha-u1.github.io/event-form/" target="_blank">Live Demo</a>
+
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="portfolio-card">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Sara Travels">
+
+        <div class="portfolio-label">
+          <h5>Sara Travels</h5>
+          <span>HTML · CSS · JavaScript</span>
+
+          <a href="https://rohan-1405.github.io/Sara-Travels/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://rohan-1405.github.io/Sara-Travels/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="portfolio-card">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="Web Dev Course">
+
+        <div class="portfolio-label">
+          <h5>Web Dev Course</h5>
+          <span>HTML · CSS · Bootstrap</span>
+                    <a href="https://sangeetha-u1.github.io/web-development-course/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://sangeetha-u1.github.io/web-development-course/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <div class="contact-container">
+
+    <div class="section-header">
+      <p class="section-label">GET IN TOUCH</p>
+      <h2 class="section-title">Contact Me</h2>
+      <p class="section-desc">
+        I'm available for freelance work and frontend developer opportunities.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- LEFT SIDE -->
+      <div class="contact-left">
+
+        <h3>Let's Work Together</h3>
+        <p>
+          Feel free to contact me for any web development projects or job opportunities.
+        </p>
+
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <span>Address</span>
+            <strong>Karimnagar, Telangana - 505001</strong>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <span>Phone</span>
+            <strong>8142695161</strong>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <span>Email</span>
+            <strong>sangeethauppula2@gmail.com</strong>
+          </div>
+        </div>
+
+        <!-- MAP -->
+        <div class="map-box">
+          <h4>My Location</h4>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5407!2d79.1288!3d18.4386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bccd9b5f6f0d6c1%3A0x6f4a2c2c1a1b2c3d!2sKarimnagar%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000"
+            loading="lazy">
+          </iframe>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE FORM -->
+      <div class="contact-right">
+
+        <form>
+          <div class="form-row">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+          </div>
+
+          <input type="email" placeholder="Email Address" required>
+
+          <textarea placeholder="Your Message" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-container">
+
+    <h3>Sangeetha Uppula</h3>
+
+    <p>Frontend Developer | HTML • CSS • Bootstrap • JavaScript</p>
+
+    <div class="footer-social">
+      <a href="https://github.com/Sangeetha-U1" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <a href="#">
+        <i class="fab fa-linkedin"></i>
+      </a>
+
+      <a href="#">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+
+    <p class="copyright">
+      © 2026 All Rights Reserved | Designed by Sangeetha
+    </p>
+
+  </div>
+</footer>
+</section>
+
+<script>
+  // Smooth scroll + dot nav active state
+  function toggleMenu() {
+  const menu = document.getElementById("navLinks");
+  menu.classList.toggle("show");
+}
+/* =========================
+   TYPING..
+========================= */
+const words = [
+  "Frontend Developer",
+  "Web Developer",
+];
+
+let i = 0;      // word index
+let j = 0;      // letter index
+let currentWord = "";
+let isDeleting = false;
+
+const typingElement = document.getElementById("typing");
+
+function typeEffect() {
+  currentWord = words[i];
+
+  if (isDeleting) {
+    typingElement.textContent = currentWord.substring(0, j--);
+  } else {
+    typingElement.textContent = currentWord.substring(0, j++);
+  }
+
+  if (!isDeleting && j === currentWord.length) {
+    isDeleting = true;
+    setTimeout(typeEffect, 1000); // pause after typing
+    return;
+  }
+
+  if (isDeleting && j === 0) {
+    isDeleting = false;
+    i = (i + 1) % words.length;
+  }
+
+  setTimeout(typeEffect, isDeleting ? 50 : 100);
+}
+
+typeEffect();
+  
+/* =========================
+   SLIDER FUNCTIONALITY
+========================= */
+
+const slider = document.getElementById("slider");
+const dots = document.querySelectorAll(".dot-nav a");
+const sections = document.querySelectorAll("section");
+
+// Go to section on dot click
+function goTo(i) {
+  slider.scrollTo({
+    left: i * window.innerWidth,
+    behavior: "smooth"
+  });
+}
+
+// Update active dot while scrolling
+slider.addEventListener("scroll", () => {
+  const index = Math.round(slider.scrollLeft / window.innerWidth);
+
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === index);
+  });
+});
+
+
+/* =========================
+   SKILLS ANIMATION
+========================= */
+
+const skillFills = document.querySelectorAll(".skill-fill");
+const skillsSection = document.getElementById("skills");
+
+const skillObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      skillFills.forEach(fill => {
+        const width = fill.style.width;
+        fill.style.width = "0";
+
+        setTimeout(() => {
+          fill.style.width = width;
+        }, 200);
+      });
+    }
+  });
+}, { threshold: 0.3 });
+
+skillObserver.observe(skillsSection);
+
+
+/* =========================
+   OPTIONAL: KEYBOARD NAV
+   (Left / Right arrows)
+========================= */
+
+document.addEventListener("keydown", (e) => {
+  const index = Math.round(slider.scrollLeft / window.innerWidth);
+
+  if (e.key === "ArrowRight" && index < sections.length - 1) {
+    goTo(index + 1);
+  }
+
+  if (e.key === "ArrowLeft" && index > 0) {
+    goTo(index - 1);
+  }
+});
+</script>
+
+</body>
+</html>

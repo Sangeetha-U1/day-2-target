@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EduNova - Modern Learning Platform</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#f5f9ff;
+overflow-x:hidden;
+line-height:1.8;
+}
+
+/* ACCESSIBILITY */
+
+.skip-link{
+position:absolute;
+top:-60px;
+left:20px;
+background:#000;
+color:white;
+padding:12px 20px;
+z-index:1000;
+border-radius:8px;
+text-decoration:none;
+}
+
+.skip-link:focus{
+top:20px;
+}
+
+:focus{
+outline:3px solid #ffb703;
+outline-offset:3px;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:linear-gradient(90deg,#3a0ca3,#4361ee,#4cc9f0);
+padding:15px 0;
+box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+.navbar-brand{
+font-size:32px;
+font-weight:bold;
+color:white !important;
+}
+
+.nav-link{
+color:white !important;
+margin-left:18px;
+font-size:17px;
+font-weight:500;
+transition:0.3s;
+}
+
+.nav-link:hover{
+color:#ffe66d !important;
+transform:translateY(-2px);
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1974&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+color:white;
+padding:120px 20px;
+}
+
+.hero-content{
+max-width:750px;
+}
+
+.hero h1{
+font-size:48px;
+font-weight:600;
+line-height:1.2;
+margin-bottom:25px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:35px;
+}
+
+.hero-btn{
+padding:15px 40px;
+font-size:20px;
+border-radius:50px;
+font-weight:bold;
+margin-right:15px;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+text-align:center;
+font-size:48px;
+font-weight:800;
+margin-bottom:20px;
+color:#3a0ca3;
+}
+
+.section-subtitle{
+text-align:center;
+font-size:20px;
+max-width:850px;
+margin:auto;
+margin-bottom:60px;
+color:#555;
+}
+
+/* STATS */
+
+.stats{
+margin-top:-80px;
+position:relative;
+z-index:10;
+}
+
+.stat-box{
+background:white;
+padding:40px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+transition:0.4s;
+}
+
+.stat-box:hover{
+transform:translateY(-10px);
+}
+
+.stat-box h2{
+font-size:45px;
+font-weight:bold;
+color:#4361ee;
+}
+
+/* FEATURES */
+
+.features{
+padding:100px 20px;
+}
+
+.feature-card{
+background:white;
+padding:35px;
+border-radius:25px;
+height:100%;
+transition:0.4s;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.feature-card:hover{
+transform:translateY(-10px);
+}
+
+.feature-card img{
+width:100%;
+height:230px;
+object-fit:cover;
+border-radius:18px;
+margin-bottom:25px;
+}
+
+/* COURSES */
+
+.courses{
+padding:100px 20px;
+background:linear-gradient(180deg,#eef5ff,#ffffff);
+}
+
+.course-card{
+background:white;
+border-radius:25px;
+overflow:hidden;
+transition:0.4s;
+height:100%;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.course-card:hover{
+transform:translateY(-12px);
+}
+
+.course-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.course-body{
+padding:30px;
+}
+
+.course-tag{
+display:inline-block;
+padding:8px 18px;
+background:#4361ee;
+color:white;
+border-radius:30px;
+font-size:14px;
+margin-bottom:15px;
+}
+
+/* ACCESSIBILITY */
+
+.accessibility{
+padding:100px 20px;
+background:
+linear-gradient(135deg,#3a0ca3,#4361ee);
+color:white;
+}
+
+.access-box{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+padding:50px;
+border-radius:30px;
+}
+
+.access-box img{
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+.access-box li{
+margin-bottom:18px;
+font-size:18px;
+}
+
+/* INSTRUCTORS */
+
+.instructors{
+padding:100px 20px;
+background:#ffffff;
+}
+
+.instructor-card{
+background:white;
+border-radius:25px;
+overflow:hidden;
+text-align:center;
+height:100%;
+transition:0.4s;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.instructor-card:hover{
+transform:translateY(-10px);
+}
+
+.instructor-card img{
+width:100%;
+height:320px;
+object-fit:cover;
+}
+
+.instructor-body{
+padding:25px;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+padding:100px 20px;
+background:#eef5ff;
+}
+
+.testimonial-card{
+background:white;
+padding:40px;
+border-radius:25px;
+height:100%;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.testimonial-card img{
+width:90px;
+height:90px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:20px;
+}
+
+/* NEWSLETTER */
+
+.newsletter{
+padding:100px 20px;
+background:
+linear-gradient(135deg,#7209b7,#4361ee,#4cc9f0);
+color:white;
+text-align:center;
+}
+
+.newsletter form{
+max-width:750px;
+margin:auto;
+margin-top:40px;
+}
+
+.newsletter input{
+height:60px;
+border:none;
+border-radius:12px;
+padding-left:15px;
+}
+
+.newsletter button{
+height:60px;
+border-radius:12px;
+font-weight:bold;
+font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+background:#0b1020;
+color:white;
+padding:60px 20px;
+text-align:center;
+}
+
+footer p{
+color:#d8d8d8;
+margin-bottom:12px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero{
+text-align:center;
+}
+
+.hero h1{
+font-size:45px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.section-title{
+font-size:35px;
+}
+
+.section-subtitle{
+font-size:17px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">
+Skip to Main Content
+</a>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="#">
+🎓 EduNova
+</a>
+
+<button
+class="navbar-toggler"
+data-bs-toggle="collapse"
+data-bs-target="#navMenu"
+aria-label="Toggle Navigation">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="navMenu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#features">Features</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#courses">Courses</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#accessibility">Accessibility</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#instructors">Instructors</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#testimonials">Reviews</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<main id="main-content">
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<h1>
+Transform Your Future Through Online Learning
+</h1>
+
+<p>
+EduNova provides world-class online education with interactive lessons,
+industry-leading instructors, accessibility-focused learning tools,
+and career-oriented programs designed to help students succeed globally.
+</p>
+
+<button class="btn btn-warning hero-btn">
+Start Learning
+</button>
+
+<button class="btn btn-outline-light hero-btn">
+Explore Courses
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="container">
+
+<div class="row g-4">
+
+<div class="col-md-3">
+
+<div class="stat-box">
+
+<h2>50K+</h2>
+
+<p>Active Students Worldwide</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="stat-box">
+
+<h2>120+</h2>
+
+<p>Professional Courses</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="stat-box">
+
+<h2>95%</h2>
+
+<p>Course Completion Rate</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="stat-box">
+
+<h2>24/7</h2>
+
+<p>Student Support Access</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features" id="features">
+
+<div class="container">
+
+<h2 class="section-title">
+Why Students Love EduNova
+</h2>
+
+<p class="section-subtitle">
+Our learning platform combines engaging educational content, modern technology,
+and accessibility-first experiences to ensure every learner can achieve success.
+</p>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+
+<div class="feature-card">
+
+<img
+src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1974&auto=format&fit=crop"
+alt="Interactive Learning">
+
+<h4>Interactive Learning Experience</h4>
+
+<p>
+Enjoy engaging video lessons, coding exercises, live projects,
+and quizzes that make learning exciting and practical for students.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="feature-card">
+
+<img
+src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1974&auto=format&fit=crop"
+alt="Global Community">
+
+<h4>Collaborative Student Community</h4>
+
+<p>
+Connect with learners worldwide, participate in discussions,
+and collaborate on projects with mentors and classmates.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="feature-card">
+
+<img
+src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1974&auto=format&fit=crop"
+alt="Flexible Learning">
+
+<h4>Flexible Self-Paced Courses</h4>
+
+<p>
+Learn anytime from any device with flexible schedules designed
+for students, professionals, and lifelong learners.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- COURSES -->
+
+<section class="courses" id="courses">
+
+<div class="container">
+
+<h2 class="section-title">
+Popular Professional Courses
+</h2>
+
+<p class="section-subtitle">
+Master modern skills with industry-focused courses created by expert instructors.
+</p>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+
+<div class="course-card">
+
+<img
+src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1974&auto=format&fit=crop"
+alt="Web Development">
+
+<div class="course-body">
+
+<div class="course-tag">
+Development
+</div>
+
+<h4>Full Stack Web Development</h4>
+
+<p>
+Learn HTML, CSS, JavaScript, React, Node.js, databases,
+responsive design, and deployment through real-world projects.
+</p>
+
+<button class="btn btn-primary w-100 mt-3">
+Enroll Course
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="course-card">
+
+<img
+src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1974&auto=format&fit=crop"
+alt="Data Science">
+
+<div class="course-body">
+
+<div class="course-tag">
+Data Science
+</div>
+
+<h4>Advanced Data Science & AI</h4>
+
+<p>
+Master Python programming, machine learning, AI models,
+data visualization, and analytics for modern careers.
+</p>
+
+<button class="btn btn-primary w-100 mt-3">
+Enroll Course
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="course-card">
+
+<img
+src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1974&auto=format&fit=crop"
+alt="UI UX Design">
+
+<div class="course-body">
+
+<div class="course-tag">
+Design
+</div>
+
+<h4>Creative UI/UX Design Mastery</h4>
+
+<p>
+Build stunning interfaces and seamless user experiences
+using modern design systems and prototyping tools.
+</p>
+
+<button class="btn btn-primary w-100 mt-3">
+Enroll Course
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ACCESSIBILITY -->
+
+<section class="accessibility" id="accessibility">
+
+<div class="container">
+
+<h2 class="section-title text-white">
+Accessibility First Learning
+</h2>
+
+<p class="section-subtitle text-white">
+EduNova ensures every student can access quality education with inclusive and accessible features.
+</p>
+
+<div class="access-box">
+
+<div class="row align-items-center g-5">
+
+<div class="col-lg-6">
+
+<img
+src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1974&auto=format&fit=crop"
+alt="Accessible Education"
+class="img-fluid">
+
+</div>
+
+<div class="col-lg-6">
+
+<h3 class="mb-4">
+Designed For Inclusive Learning
+</h3>
+
+<ul>
+<li>✔ Screen Reader Friendly Navigation</li>
+<li>✔ Keyboard Accessible Components</li>
+<li>✔ High Contrast Color Combinations</li>
+<li>✔ Accessible Forms & Interactive Elements</li>
+<li>✔ Mobile Responsive Layouts</li>
+<li>✔ Descriptive Alt Text For Images</li>
+<li>✔ Readable Typography & Spacing</li>
+<li>✔ Accessible Video Learning Support</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- INSTRUCTORS -->
+
+<section class="instructors" id="instructors">
+
+<div class="container">
+
+<h2 class="section-title">
+Meet Our Expert Instructors
+</h2>
+
+<p class="section-subtitle">
+Learn from experienced educators and industry professionals passionate about student success.
+</p>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+
+<div class="instructor-card">
+
+<img
+src="https://randomuser.me/api/portraits/men/32.jpg"
+alt="Instructor">
+
+<div class="instructor-body">
+
+<h4>Michael Anderson</h4>
+
+<p>
+Senior Full Stack Developer with 10+ years of experience building scalable applications.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="instructor-card">
+
+<img
+src="https://randomuser.me/api/portraits/women/44.jpg"
+alt="Instructor">
+
+<div class="instructor-body">
+
+<h4>Sarah Williams</h4>
+
+<p>
+Professional UI/UX Designer helping students create modern digital experiences.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="instructor-card">
+
+<img
+src="https://randomuser.me/api/portraits/men/54.jpg"
+alt="Instructor">
+
+<div class="instructor-body">
+
+<h4>David Johnson</h4>
+
+<p>
+AI and Data Science expert specializing in machine learning and analytics education.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section class="testimonials" id="testimonials">
+
+<div class="container">
+
+<h2 class="section-title">
+What Students Say
+</h2>
+
+<p class="section-subtitle">
+Thousands of students trust EduNova to accelerate their learning and careers.
+</p>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+
+<div class="testimonial-card">
+
+<img
+src="https://randomuser.me/api/portraits/women/65.jpg"
+alt="Student">
+
+<h4>Emily Carter</h4>
+
+<p>
+"EduNova completely transformed my career journey. The practical projects and supportive instructors made learning enjoyable and effective."
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="testimonial-card">
+
+<img
+src="https://randomuser.me/api/portraits/men/52.jpg"
+alt="Student">
+
+<h4>James Wilson</h4>
+
+<p>
+"The accessibility features and flexible course structure allowed me to learn comfortably while managing my full-time job."
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="testimonial-card">
+
+<img
+src="https://randomuser.me/api/portraits/women/32.jpg"
+alt="Student">
+
+<h4>Olivia Brown</h4>
+
+<p>
+"The platform is visually beautiful, easy to use, and packed with valuable educational resources for every learner."
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+<div class="container">
+
+<h2 class="display-4 fw-bold">
+Join Our Learning Community
+</h2>
+
+<p class="mt-4 fs-5">
+Subscribe for new course launches, learning resources,
+career guidance, and exclusive student opportunities.
+</p>
+
+<form>
+
+<div class="row g-3">
+
+<div class="col-md-9">
+
+<input
+type="email"
+class="form-control"
+placeholder="Enter Your Email Address"
+aria-label="Email Address">
+
+</div>
+
+<div class="col-md-3">
+
+<button class="btn btn-warning w-100">
+Subscribe Now
+</button>
+
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2 class="fw-bold mb-3">
+🎓 EduNova
+</h2>
+
+<p>
+Empowering global learners through accessible, innovative,
+and engaging online education experiences.
+</p>
+
+<p>
+📍 New York, USA
+</p>
+
+<p>
+📞 +1 800 123 4567
+</p>
+
+<p>
+📧 support@edunova.com
+</p>
+
+<p class="mt-4">
+© 2026 EduNova Learning Platform. All Rights Reserved.
+</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
