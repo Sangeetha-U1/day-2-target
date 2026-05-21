@@ -29,6 +29,9 @@ footer {
       background-color: orange;
       border-radius: 20px;
   }
+     .navbar-brand{
+  margin-left: 5px;
+}
   .custom-btn {
     color: white;
     border: 2px solid #fff;
@@ -74,14 +77,50 @@ footer {
     font-size: 32px;
   }
 }
+     @media (max-width: 576px) {
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .navbar-brand {
+    font-size: 20px !important;
+  }
+
+  /* only hero image responsive */
+  .hero img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* navbar logo size */
+  .navbar img {
+    width: 50px;
+    height: 50px;
+  }
+}
     </style>
 </head>
 <body>
     
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:rgb(95, 2, 2);">
-  <div class="container-fluid">
-          <img src="coffee-shop-logo-free-png.webp" alt="Bootstrap" width="70" height="70">
-    <a class="navbar-brand  fw-bold fs-2" href="#">Coffee</a>
+ 
+      <div class="container-fluid d-flex align-items-center">
+    
+    <img src="coffee-shop-logo-free-png.webp" 
+         alt="logo" 
+         width="70" 
+         height="70"
+         class="me-2">
+    <a class="navbar-brand fw-bold fs-2" href="#">Coffee</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
